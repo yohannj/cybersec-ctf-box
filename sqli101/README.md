@@ -1,5 +1,4 @@
 # sqli101
-
 sqli101 is a box introducing SQL injections.
 
 It will cover four injections:
