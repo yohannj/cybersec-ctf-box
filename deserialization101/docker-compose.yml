@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  java:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./flag:/flag
+    ports:
+      - "80:80"

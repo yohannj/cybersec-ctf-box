@@ -1,0 +1,22 @@
+plugins {
+    id 'application'
+}
+
+apply plugin: 'java'
+
+version = getVersion()
+def javaVersion = JavaVersion.VERSION_11;
+sourceCompatibility = javaVersion;
+targetCompatibility = javaVersion; // defaults to sourceCompatibility
+
+dependencies {
+    implementation group: 'org.eclipse.jetty', name: 'jetty-server', version: '11.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'deserialization101.App'
+}
