@@ -1,24 +1,26 @@
-# deserialization101
-deserialization101 is a box introducing Insecure Deserialization vulnerabilities.
+# Deserialization 101
+This is a tutorial challenge to discover Insecure Deserialization in Java and way to exploit them.
+Refer to the [presentation](https://docs.google.com/presentation/d/1rHkQTNvTNiaPtfItw8ZyQSbm9QYDS4XJZtlmva9SYT0/preview) to go through the tutorial.
 
-It will cover one vulnerability in Java.
+The flag is in the file `flag` located in the root folder of the service.
 
-To confirm the exploitation of the vulnerability, a flag is to be found, it is in the format: `flag{...}`.
+## Storytelling
+I'm writing an App with many mini games.
 
-# Material
-## Slides
-The slides provided presentes briefly what is Deserialization and what are Insecure Deserializations, and then explain the attack of this box.
-https://docs.google.com/presentation/d/1rHkQTNvTNiaPtfItw8ZyQSbm9QYDS4XJZtlmva9SYT0/preview
+I just created a first one. There is a hardcoded list of numbers and you have to guess them all!
+You can send a number, and it will tell you how many numbers in the list are smaller than yours.
 
-## Code
-This repository can be seen as a white box, do not hesitate to check the code.
-Obviously as this is self-hosted, the flag can be read from the code, but the real challenge is to start the service using `docker-compose up -d` and try to find it by interacting with the service.
+Do you want to play with me? Hopefully you cannot break my game...
 
-# Not covered
+## Playing the box
+You can access the code inside the `dist` folder.
+To start the challenge, go to `challenge` and run `docker-compose up -d`.
+
+## Not covered
 This box expects basic Java and Python knowledge.
 Plenty of ressources of high quality are available through your favorite search engine.
 
-# Contributing
+## Contributing
 Improvements are welcome!
 
 If it concerns the code, please fork this repository and open a PR. It is advised to open an issue first to discuss the improvement.

@@ -1,0 +1,18 @@
+{
+  "name": "sqli_101",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Amendil",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon ."
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "clickhouse": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

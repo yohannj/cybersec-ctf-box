@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:22.8.9.24
+    volumes:
+      - ./clickhouse/config:/docker-entrypoint-initdb.d
+    networks:
+      - db
+    healthcheck:
+      test: clickhouse-client --query "select count(1) from system.tables"
+
+  node:
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - db
+      - external
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+
+networks:
+  db:
+    internal: true
+  external:
+    internal: false

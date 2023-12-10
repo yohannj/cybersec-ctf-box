@@ -3,7 +3,10 @@ reaCH me is a box about database vulnerabilities, in this case about ClickHouse.
 
 To confirm the exploitation of the vulnerability, a flag can be found in the root folder of the database. It is in the format: `flag{...}`.
 
-# Material
-## Code
-This repository can be seen as a white box, do not hesitate to check the code.
-Obviously as this is self-hosted, the flags can be read from the code, but the real challenge is to start the services using `docker-compose up -d` and try to find them by interacting with the services.
+## Storytelling
+I got this ClickHouse server running without issues for years so I never thought about updating it.
+Recently someone stole sensitive data I had stored there. Can you help me find how the intruder did it?
+
+## Playing the box
+You can access the code inside the `dist` folder.
+To start the challenge, go to `challenge` and run `docker-compose up -d`.
