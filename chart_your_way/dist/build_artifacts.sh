@@ -4,7 +4,6 @@ BASEDIR=$(dirname $(realpath "$0"))
 
 # Build zip file containing public resources
 cd $BASEDIR/../challenge/
-rm -rf .gradle
 zip -q -r $BASEDIR/artifacts.zip ./*
 
 # Rename zip file to include its sha256
