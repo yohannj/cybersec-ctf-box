@@ -4,7 +4,7 @@
 The service deserialises User Input
 
 ## Exploitation
-Reusing the code template available in the slides, we can write the following exploit, replacing <HOST:PORT> by a server listening at the given port (e.g. open a https tunnel `ngrok http <LOCAL_PORT>` and then listen `nc -lvnp <LOCAL_PORT>`).
+Reusing the code template available in the slides, we can write the following exploit, replacing <HOST:PORT> by a server listening at the given port (e.g. open a https tunnel `ngrok http <LOCAL_PORT>` and then listen `nc -lvnp <LOCAL_PORT>`).  
 The Python payload could be replaced by a Reverse Shell payload to get a shell on the server. Some examples can be found on [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#python).
 
 ```java
@@ -41,7 +41,7 @@ public class Exploit {
 }
 ```
 
-The constructor of `CustomComparator` only allows Strings containing a single character.
+The constructor of `CustomComparator` only allows Strings containing a single character.  
 When deserializing, the object was already "constructed", the JVM will use the method `readObject` instead of going through the constructor. So to build our payload, we can update the constructor to allow more than just a single character.
 
 We can then open our listener on our server: `nc -lvnp <PORT>` and request the service with our malicious payload:

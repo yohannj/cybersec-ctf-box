@@ -4,8 +4,8 @@
 Encryption algorithm is fully reversible.
 
 ## Exploitation
-We have in our hand a jar file.
-We can access its content using a decompiler. We can use an [online version](https://www.decompiler.com/).
+We have in our hand a jar file.  
+To access its content we can use a decompiler. For example this [online version](https://www.decompiler.com/).
 
 The decompiled jar contains a single java file: Ransom.java.
 ```java
@@ -91,8 +91,8 @@ for(int var4 = 0; var4 < var2.length; ++var4) {
 }
 ```
 
-Reversing bytes is quite straightforward.
-As for RC4, it relies on XOR, and similar decryption techniques work.
+Reversing bytes is quite straightforward.  
+As for RC4, it relies on XOR, and similar decryption techniques work.  
 In particular `RC4(RC4(decoded file, key), key) == decoded file`, so in our case: `RC4(encoded file, "Long passphrase are always secure :)") == decoded file`.
 
 We can use online tools like [CyberChef](https://gchq.github.io/CyberChef) to load the encoded file, reverse and use RC4 with the passphrase.

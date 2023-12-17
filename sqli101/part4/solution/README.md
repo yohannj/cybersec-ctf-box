@@ -7,10 +7,10 @@ db.testQueryInBlind(query)
 ```
 
 ## Exploitation
-We can run whatever query we are interested in, but we do not see the result of our query.
+We can run whatever query we are interested in, but we do not see the result of our query.  
 Our goal will be to guess / bruteforce the data one character at a time. To detect our guess is right we will leverage the `sleep(seconds)` function available in ClickHouse to increase the query duration.
 
-The bruteforce part can be harmonized in a method, leading to a small Python script.
+The bruteforce part can be harmonized in a method, leading to a small Python script.  
 Note: We could also play with the LIMIT/OFFSET to list multiple tables and columns.
 ```python
 import requests
@@ -45,8 +45,8 @@ print(f"Flag: {flag}")
 ```
 
 ## Fix
-Internal API must never be available openly in prod.
+Internal API must never be available openly in prod.  
 Finding weird URL names is not a fix.
 
-The quickest fix is to delete the code.
+The quickest fix is to delete the code.  
 But if we want to keep the "feature", it should be behind a login page where only internal users can connect to.

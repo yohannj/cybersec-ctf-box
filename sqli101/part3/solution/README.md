@@ -48,10 +48,10 @@ curl --request POST \
 ```
 
 ## Fix
-User inputs should be validated (can use a regex to restrict to a subset of ascii characters).
+User inputs should be validated (can use a regex to restrict to a subset of ascii characters).  
 User inputs can also be escaped.
 
-It is also possible to use query parameterized queries. (cf [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/cli#cli-queries-with-parameters)).
+It is also possible to use query parameterized queries. (cf [ClickHouse documentation](https://clickhouse.com/docs/en/interfaces/cli#cli-queries-with-parameters)).  
 Implementing that solution changes two files, `routes/index.js` and `database.js`
 
 ```js
