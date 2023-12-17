@@ -41,6 +41,7 @@ In both cases, your name will be mentioned on the box to thank you.
 | --------- | -------- | ---------- |
 | [Chart your way](https://github.com/yohannj/cybersec-ctf-box/chart_your_way) | Web | Easy |
 | [Deserialization 101](https://github.com/yohannj/cybersec-ctf-box/deserialization101) | Web | Tuto / Medium |
+| [Ranxorware](https://github.com/yohannj/cybersec-ctf-box/ranxorware) | Rev | Baby |
 | [ReaCH me](https://github.com/yohannj/cybersec-ctf-box/reaCH_me) | Database | Medium |
 | [SQLi 101](https://github.com/yohannj/cybersec-ctf-box/sqli101) | Web | Tuto / Easy |
 
