@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Amendil",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon ."
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "clickhouse": "^2.6.0"
+    "express": "4.18.2",
+    "clickhouse": "2.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "3.0.2"
   }
 }
