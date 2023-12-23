@@ -1,4 +1,4 @@
-FROM gradle:jdk11-alpine
+FROM gradle:8.5.0-jdk21-jammy
 
 # Setup app
 RUN mkdir -p /app
