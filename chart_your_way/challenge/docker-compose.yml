@@ -1,6 +1,6 @@
 services:
   clickhouse:
-    image: clickhouse/clickhouse-server:22.8.9.24
+    image: clickhouse/clickhouse-server:23.8.8.20
     volumes:
       - ./clickhouse/config:/docker-entrypoint-initdb.d
     networks:

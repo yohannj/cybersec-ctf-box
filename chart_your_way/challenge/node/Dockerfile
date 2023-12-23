@@ -1,4 +1,4 @@
-FROM node:current-buster-slim
+FROM node:21.5.0-bullseye-slim
 
 # Install packages
 RUN apt-get update \
