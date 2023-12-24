@@ -41,9 +41,10 @@ In both cases, your name will be mentioned on the box to thank you.
 | --------- | -------- | ---------- |
 | [Chart your way](https://github.com/yohannj/cybersec-ctf-box/tree/main/chart_your_way) | Web | Easy |
 | [Deserialization 101](https://github.com/yohannj/cybersec-ctf-box/tree/main/deserialization101) | Web | Tuto / Medium |
+| [Flink my secrets](https://github.com/yohannj/cybersec-ctf-box/tree/main/flink_my_secrets) | Web | Easy |
 | [Javansomware](https://github.com/yohannj/cybersec-ctf-box/tree/main/javansomware) | Rev | Easy |
 | [Ranxorware](https://github.com/yohannj/cybersec-ctf-box/tree/main/ranxorware) | Rev | Baby |
-| [ReaCH me](https://github.com/yohannj/cybersec-ctf-box/tree/main/reaCH_me) | Database | Medium |
+| [ReaCH me](https://github.com/yohannj/cybersec-ctf-box/tree/main/reaCH_me) | Web | Medium |
 | [SQLi 101](https://github.com/yohannj/cybersec-ctf-box/tree/main/sqli101) | Web | Tuto / Easy |
 
 ### Adding a box
